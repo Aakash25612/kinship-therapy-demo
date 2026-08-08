@@ -38,8 +38,9 @@ export default function App() {
     <AppProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/welcome" element={<Landing />} />
           <Route
             path="/app"
             element={(
@@ -61,7 +62,7 @@ export default function App() {
             <Route path="payments" element={<PrivateRoute roles={['admin']}><Payments /></PrivateRoute>} />
             <Route path="reports" element={<PrivateRoute roles={['admin']}><Reports /></PrivateRoute>} />
           </Route>
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </BrowserRouter>
     </AppProvider>

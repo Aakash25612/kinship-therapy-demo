@@ -25,7 +25,7 @@ export default function Login() {
   return (
     <div className="auth-page">
       <div className="auth-card">
-        <Link to="/" className="brand" style={{ color: 'var(--ink)' }}>
+        <Link to="/welcome" className="brand" style={{ color: 'var(--ink)' }}>
           <span className="brand-dot" style={{ background: 'var(--accent-soft)', color: 'var(--accent)' }}>
             <Users size={16} />
           </span>
